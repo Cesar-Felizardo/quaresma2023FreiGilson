@@ -1,8 +1,17 @@
+window.addEventListener('load', function() {
+    let body = document.querySelector("body")
+    body.classList.add("waitLoad")
 
-setInterval( () => {
-    window.addEventListener('load', function() {
-        let btnMenu = document.getElementById("#btnMenu")
-        btnMenu.classList.toggle("toggleColor")
-    })
-    
-},1000)
+    init = 5
+    setInterval(function() {
+        if(init <= 0) {
+            body.classList.remove("waitLoad")
+        }
+        else {
+            init--
+        }
+    },1000)
+})
+
+
+
