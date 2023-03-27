@@ -13,7 +13,6 @@ html {
 h2.yellow {
     color: rgb(196, 196, 13);
     text-decoration: underline;
-    z-index: -1;
 }
 
 body {
@@ -39,12 +38,15 @@ h2 {
     font-size: 16px;
     transition: .5s;
 }
-
 #btnMenu:hover {
     background: rgb(72, 45, 127);
     color: white;
     cursor: pointer;
     transition: .5s;
+}
+
+.toggleColor {
+    color: #a92a2a;
 }
 
 nav {
@@ -54,13 +56,13 @@ nav {
     flex-wrap: wrap;
     padding: 20px;
     width: 60%;
+    /* display: none; */
     margin-top: 180px;
     text-shadow: none;
     color: white;
     line-height: 34px;
     border-radius: 8px;
     background: rgba(23, 24, 98, 0.646);
-    z-index: -1;
 }
 
 nav:hover {
@@ -142,10 +144,11 @@ hr {
     margin-top: 40px;
 }
 
-.waitLoad {
-    background: #fdfdfd;
-    height: 100%;
-    width: 100%;
+.filter {
+    filter: grayscale(100);
+    filter: blur(20px);
+    opacity: 0.5;
+    cursor: none;
 }
 
 .videos {
@@ -155,7 +158,6 @@ hr {
     justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
-    z-index: -1;
 }
 
 .videos > .span {
@@ -176,6 +178,12 @@ hr {
     background: rgb(102, 0, 255);
     color: white;
 }
+
+/* .videos > .span:hover {
+    cursor: pointer;
+    color: blueviolet;
+    background: rgb(255, 255, 255);
+} */
 
 footer { 
     width: 99vw;
@@ -255,8 +263,8 @@ footer {
         height: 220px;
     }
 
-    .videos {
-        margin: 1px 0px;
+    .videos{ 
+        margin-top: -160px;
     }
 
     .videos > .span {
@@ -281,8 +289,12 @@ footer {
         display: none;
     }
 
+    .videos{ 
+        margin-top: -200px;
+    }
+
     h2 {
-        margin-top: 10px;
+        margin-top: 0px;
     }
 
     header {

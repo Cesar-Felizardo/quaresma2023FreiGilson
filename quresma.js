@@ -1,4 +1,4 @@
-window.addEventListener('load', function() {
+/* window.addEventListener('load', function() {
     let body = document.querySelector("body")
     body.classList.add("waitLoad")
 
@@ -11,7 +11,7 @@ window.addEventListener('load', function() {
             init--
         }
     },1000)
-})
+}) */
 
 
 
